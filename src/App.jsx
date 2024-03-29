@@ -1,8 +1,11 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "font-awesome/css/font-awesome.min.css";
 import Accueil from './components/Accueil';
 import Quizz from './components/Quizz';
 import Resultat from './components/Resultat';
+import Header from './components/Header';
 
 const router = createBrowserRouter([
     {
@@ -21,7 +24,12 @@ const router = createBrowserRouter([
 
 function App() {
     return (
-        <RouterProvider router={router} />
+        <div>
+            <Header />
+            <div className="container">
+                <RouterProvider router={router} />
+            </div>
+        </div>
     )
 }
 
