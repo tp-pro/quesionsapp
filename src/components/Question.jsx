@@ -1,11 +1,13 @@
 import React from 'react';
 
-function Question(props) {
+function Question({texteQuestion, reponses, verifierReponse}) {
     return (
         <div>
-            <h2>{props.texteQuestion}</h2>
-            {props.reponses.map((reponse, index) => (
-                <button key={index}>{reponse}</button>
+            <h2>{texteQuestion}</h2>
+            {reponses.map((reponse, index) => (
+                <button key={index} onClick={() => verifierReponse(reponse)}>
+                    {reponse}
+                </button>
             ))}
         </div>
     )
