@@ -1,4 +1,4 @@
-# quesionsapp
+# questionsapp
 
 It's a Vite JS project
 
